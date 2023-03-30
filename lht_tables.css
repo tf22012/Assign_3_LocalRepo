@@ -17,6 +17,56 @@
    Mobile Styles: 0px to 640px 
    ===============================
 */
+@media only screen and (max-width: 640px)
+{
+   /* Display all table, tbody, tr, td, th, and caption elements as blocks */
+   table, tbody, tr, td, th, caption 
+   {
+      display: block;
+   }
+
+   /* Hide the thead and h1 elements */
+   thead, h1 
+   {
+      display: none;
+   }
+
+   /* CSS Rules for the caption element */
+   caption 
+   {
+      color: white;
+      background-color: #8e99a3;
+      font-size: 2em;
+      line-height: 2em;
+   }
+
+   /* CSS Rules for data cell elements inside the table body */
+   tbody td
+   {
+      border: dotted gray 1px;
+      color: rgb(11, 12, 145);
+      position: relative;
+      padding-left: 40%;
+      min-height: 40px;
+   }
+
+   /* CSS Rules for every odd table row attribute with in the tbody */
+   tbody tr:nth-of-type(odd)
+   {
+      border: solid gray 2px;
+      background-color: rgb(255, 235, 178);
+   }
+
+   /* CSS Rules for date-date attribute with in the tbody */
+   tbody tr[date-date]
+   {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      padding: 5px;
+   }
+}
 
 
 
@@ -25,3 +75,8 @@
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+
+@media only screen and (min-width: 640px) 
+{
+
+}
