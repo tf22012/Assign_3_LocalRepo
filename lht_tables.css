@@ -26,7 +26,12 @@
    }
 
    /* Hide the thead and h1 elements */
-   thead, h1 
+   table thead
+   {
+      display: none;
+   }
+
+   table h1 
    {
       display: none;
    }
@@ -35,8 +40,8 @@
    caption 
    {
       color: white;
-      background-color: #8e99a3;
-      font-size: 2em;
+      background-color: rgb(50,50,50);
+      font-size: 1.5em;
       line-height: 2em;
    }
 
@@ -51,15 +56,17 @@
    }
 
    /* CSS Rules for every odd table row attribute with in the tbody */
-   tbody tr:nth-of-type(odd)
+   tr:nth-of-type(odd)
    {
       border: solid gray 2px;
       background-color: rgb(255, 235, 178);
    }
 
+   /* Ask why data date isnt working! */
    /* CSS Rules for date-date attribute with in the tbody */
-   tbody tr[date-date]
+   td:before
    {
+      content: attr(data-date);
       position: absolute;
       top: 0;
       left: 0;
