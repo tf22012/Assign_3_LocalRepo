@@ -136,5 +136,10 @@
       letter-spacing: 3px;  
    }
 
-   /**/
+   /* CSS Rules for th elements within the thead section */
+   thead, th 
+   {
+      background-color: rgb(154, 64, 3);
+      color: white;
+   }
 }
