@@ -56,15 +56,14 @@
    }
 
    /* CSS Rules for every odd table row attribute with in the tbody */
-   tr:nth-of-type(odd)
+   tbody tr:nth-of-type(odd)
    {
       border: solid gray 2px;
       background-color: rgb(255, 235, 178);
    }
 
-   /* Ask why data date isnt working! */
    /* CSS Rules for date-date attribute with in the tbody */
-   td:before
+   tbody td::before
    {
       content: attr(data-date);
       position: absolute;
@@ -83,7 +82,59 @@
    =============================================
 */
 
-@media only screen and (min-width: 640px) 
+@media only screen and (min-width: 641px) 
 {
+   /* CSS Rules for Table element format */
+   table
+   {
+      background-image: url(lht_photo1.png);
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      background-size: 40%;
+      border: 6px double rgb(154, 64, 3);
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      table-layout: fixed;
+      width: 85%;
+   }
 
+   /* CSS Rules for every table heading's data cells */
+   th, td 
+   {
+      border: 1px solid gray;
+      font-size: 0.85em;
+      font-weight: normal;
+      padding: 5px;
+      vertical-align: top;
+      width: 14.28%;
+      word-wrap: break-word;
+   }
+
+   /* CSS Rules for every td elements */
+   td 
+   {
+      background-color: rgba(171, 171, 171, 0.6);
+      color: rgb(11, 12, 145);
+   }
+
+   /* CSS Rules for table boxes with the month Sep */
+   td[data-date*="Sep"]
+   {
+      background-color: rgba(232, 214, 148, 0.6);
+      box-shadow: inset 0 0 20px gray;
+   }
+
+   /* CSS Rules for the caption (or title) element of the table */
+   caption
+   {
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 1.2em;
+      letter-spacing: 3px;  
+   }
+
+   /**/
 }
